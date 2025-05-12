@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оборудование</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const productImages = document.querySelectorAll('.product-card img');
+            
+            productImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    const modal = document.createElement('div');
+                    modal.className = 'modal';
+                    
+                    const modalImg = document.createElement('img');
+                    modalImg.src = this.src;
+                    modalImg.className = 'modal-content';
+                    
+                    modal.appendChild(modalImg);
+                    document.body.appendChild(modal);
+                    
+                    modal.addEventListener('click', function() {
+                        this.remove();
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="products.html" class="active">Продукты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-hero">
+            <h1>Наши решения</h1>
+            <p>Современное оборудование для медицинских лабораторий от Скаймед</p>
+        </section>
+
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="images/product1.jpg" alt="Product 1">
+                <h3>ABL80 FLEX - Анализатор газов крови</h3>
+                <p>Современный анализатор газов крови и оксиметрии от Radiometer Medical ApS, обеспечивающий точные результаты для профессионального использования.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/product2.jpg" alt="Product 2">
+                <h3>AQT90 - Анализатор иммунофлуоресцентный</h3>
+                <p>Государственный анализатор иммунофлуоресцентный от Radiometer Medical ApS, предлагающий передовые диагностические решения для лабораторий.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/product3.jpg" alt="Product 3">
+                <h3>ABL800 FLEX - Анализатор газов крови и оксиметрии</h3>
+                <p>Многофункциональный анализатор газов крови и оксиметрии от Radiometer Medical ApS, идеально подходящий для интенсивной работы в лабораториях.</p>
+            </div>
+        </section>
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="images/product4.jpg" alt="Product 4">
+                <h3>Автоматический иммунохимический анализатор Access® 2</h3>
+                <p>Компактная система от Beckman Coulter для иммунохимических анализов, обеспечивающая до 100 тестов в час с высокой точностью.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/product5.jpg" alt="Product 5">
+                <h3>Автоматический анализатор физико-химических характеристик мочи iChem®VELOCITY™</h3>
+                <p>Автоматический анализатор от Iris для быстрого и точного анализа мочи, включая до 200 тестов в час.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/product6.jpg" alt="Product 6">
+                <h3>Автоматические иммунохимические анализаторы UniCel® DxI 600/800</h3>
+                <p>Многофункциональные анализаторы от Beckman Coulter для высокопроизводительных лабораторий, поддерживающие до 400 тестов/час и более.</p>
+            </div>
+        </section>
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="images/product7.jpg" alt="Product 7">
+                <h3>Автоматические гематологические анализаторы серии DxH</h3>
+                <p>Высокопроизводительные гематологические анализаторы от Beckman Coulter, обеспечивающие до 5 дифференцировок лейкоцитов для точной диагностики.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/product8.jpg" alt="Product 8">
+                <h3>Система приготовления и окрашивания мазков UniCel DxH SMS Coulter</h3>
+                <p>Передовая система от Beckman Coulter для автоматического приготовления и окрашивания мазков крови высокого качества.</p>
+            </div>
+            <div class="product-card">
+                <img src="images/product9.jpg" alt="Product 9">
+                <h3>Проточный цитофлуориметр Navios EX</h3>
+                <p>Инновационный цитофлуориметр от Beckman Coulter с поддержкой 6-, 8- и 10-цветного анализа для расширенных исследований в лабораториях.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Skymed. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -104,13 +104,25 @@ main {
 }
 
 /* Products page styles */
-.products-grid {
+.category-section {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 1rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.category-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #007bff;
+}
+
+.products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .product-card {

@@ -30,8 +30,12 @@ nav {
     align-items: center;
 }
 
+.logo{
+    cursor: pointer;
+}
+
 .logo img {
-    height: 40px;
+    height: 6.5vh;
 }
 
 .nav-links {
@@ -57,7 +61,7 @@ nav {
 
 /* Main content styles */
 main {
-    margin-top: 70px;
+    margin-top: 15vh;
     min-height: calc(100vh - 130px);
 }
 
@@ -240,4 +244,8 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.about-content li{
+    padding-left: 2vh;
 }

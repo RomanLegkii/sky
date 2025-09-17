@@ -12,10 +12,8 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            
-            const mailtoLink = `mailto:mail@skymed.ru?subject=Сообщение от ${encodeURIComponent(name)}&body=${encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`)}`;
-            
-            window.location.href = mailtoLink;
+
+            window.location.href = `mailto:mail@skymed.ru?subject=Сообщение от ${encodeURIComponent(name)}&body=${encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`)}`;
             
             // Clear the form
             event.target.reset();
@@ -40,7 +38,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="products.html">Продукты</a></li>
+<!--                <li><a href="products.html">Продукты</a></li>-->
                 <li><a href="contacts.html" class="active">Контакты</a></li>
             </ul>
         </nav>

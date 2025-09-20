@@ -3,72 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СКАЙМЕДТЕХ</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            window.location.href = `mailto:mail@skymedtech.pro?subject=Сообщение от ${encodeURIComponent(name)}&body=${encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`)}`;
+            
+            // Clear the form
+            event.target.reset();
+            
+            // Show success message
+            const successMsg = document.createElement('div');
+            successMsg.className = 'success-message';
+            successMsg.textContent = 'Спасибо! Ваше сообщение будет отправлено через почтовый клиент.';
+            event.target.appendChild(successMsg);
+            
+            setTimeout(() => {
+                successMsg.remove();
+            }, 5000);
+        }
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
+<!--        <nav>-->
+<!--            <div class="logo">-->
 <!--                <a href="index.html"><img src="images/logo.svg" alt="Logo"></a>-->
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Главная</a></li>
+<!--            </div>-->
+<!--            <ul class="nav-links">-->
+<!--                <li><a href="index.html">Главная</a></li>-->
 <!--                <li><a href="products.html">Продукты</a></li>-->
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
+<!--                <li><a href="index.html" class="active">Контакты</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+        <h2>Сайт находится на реконструкции</h2>
     </header>
 
-    <main style="margin-top: 3vh;">
-        <section class="hero">
-            <h1>СКАЙМЕДТЕХ</h1>
-            <p>Ваш надёжный партнёр в лабораторной диагностике</p>
+    <main>
+        <section class="contact-hero">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нашей командой</p>
         </section>
 
-        <section class="about-content">
-            <h2>О нас</h2>
-            <p>Наша компания на протяжении многих лет является официальным дистрибьютором известных мировых производителей лабораторного оборудования, реагентов и расходных материалов, применяющихся в медицинской практике лечебно-профилактических и научно-исследовательских учреждений:</p>
-            <ul style="list-style-type: none;">
-                <li>
-                    Beckman Coulter
-                </li>
-                <li>
-                    BioMerieux
-                </li>
-                <li>
-                    Bio-Rad Laboratories
-                </li>
-                <li>
-                    Radiometer
-                </li>
-            </ul>
-            <p>География деятельности компании – это Свердловская, Челябинская, Тюменская (включая ХМАО, ЯНАО) области</p>
-            <p>Основные направления деятельности компании «Скай Медикал»:</p>
-            <ol style="padding-left: 4vh;">
-                <li>Организация централизованных лабораторий.</li>
-                <li>Информатизация лабораторной службы ЛПУ.</li>
-                <li>Автоматизация преаналитического процесса.</li>
-                <li>Оснащение клинико-диагностических и микробиологических лабораторий необходимым оборудованием, в том числе с
-                    инвестиционной составляющей.</li>
-                <li>Обеспечение реагентами и расходными материалами.</li>
-                <li>Методологическая поддержка.</li>
-                <li>Сервисное обслуживание собственной сертифицированной инженерной службой.</li>
-            </ol>
-            
-            <div class="features">
-                <div class="feature">
-                    <h3>Качество</h3>
-                    <p>Привержены самым высоким стандартам в поставках медицинского оборудования</p>
+        <section class="contact-content">
+            <div class="contact-info">
+                <h2>Контактная информация</h2>
+                <div class="info-item">
+                    <h3>Адрес</h3>
+                    <p><i>Юридический адрес:</i> г. Екатеринбург, ул. Токарей, 46, квартира 48</p>
+                    <p><i>Почтовый адрес:</i> г. Екатеринбург, ул. Крестинского, 46А, офис 206А</p>
                 </div>
-                <div class="feature">
-                    <h3>Инновации</h3>
-                    <p>Постоянно предлагаем передовые решения для здравоохранения</p>
+                <div class="info-item">
+                    <h3>Телефон</h3>
+                    <p>+7 (343) 220-11-99</p>
                 </div>
-                <div class="feature">
-                    <h3>Забота</h3>
-                    <p>Ставим медицинских специалистов и пациентов в центр нашей работы</p>
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>avsh@skymedtech.pro</p>
                 </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Отправьте нам сообщение</h2>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Отправить</button>
+                </form>
             </div>
         </section>
     </main>

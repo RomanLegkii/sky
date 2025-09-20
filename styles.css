@@ -21,6 +21,10 @@ header {
     top: 0;
     z-index: 1000;
     height: 90px;
+/*сайт находится на реконструкции*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
